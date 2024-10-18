@@ -1,0 +1,24 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Soma dos Números de 1 a N: escreva um programa que peça ao usuário para inserir um número “N” e calcule a soma de todos os números inteiros de 1 até N. Utilize a fórmula da soma de uma sequência de números inteiros.
+    
+    Soma = (N* (N + 1) ) / 2
+    */
+
+    // Entrada de dados
+    // Recebe o número N
+    const numero = parseInt(prompt("Digite o número limite da soma:"));
+
+
+    // Processamento
+    // Calcula a soma com base na fórmula disponível
+    const soma = (numero * (numero+1)) / 2;
+
+
+    // Saída de dados
+    // Exibe o resultado do cálculo
+    document.write(`A soma dos números de 1 até ${numero} é ${soma}.`);
+
+    
+</script>

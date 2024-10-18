@@ -1,0 +1,29 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Cálculo da Área de um Círculo: escreva um programa que peça ao usuário para inserir o raio de um círculo e calcule a área desse círculo. Utilize a seguinte fórmula da área de um círculo. Use o valor de π como 3.14.
+
+    Perímetro = 2 * (largura + comprimento) 
+    Área = largura * comprimento
+    */
+
+    // Entrada de dados
+    // Recebe a largura como número decimal
+    const largura = parseFloat(prompt("Digite a largura do retângulo (em cm):"));
+    // Recebe o comprimento como número decimal
+    const comprimento = parseFloat(prompt("Digite o comprimento do retângulo (em cm):"));
+
+
+    // Processamento
+    // Calcula o perímetro com base na fórmula disponível
+    const perimetro = 2 * (largura + comprimento);
+    // Calcula a àrea com base na fórmula disponível
+    const area = largura * comprimento;
+
+
+    // Saída de dados
+    // Exibe os resultados calculados
+    document.write(`O retângulo de largura ${largura.toFixed(2)}cm e comprimento ${comprimento.toFixed(2)}cm, possuirá um perímetro de ${perimetro.toFixed(2)}cm e uma àrea de ${area.toFixed(2)}cm2.`);
+
+    
+</script>

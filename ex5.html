@@ -1,0 +1,26 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Teorema de Pitágoras: escreva um programa que peça ao usuário para inserir os comprimentos dos dois catetos de um triângulo retângulo e calcule a hipotenusa. Utilize a fórmula já trabalhada. Utilize Math.sqrt() para calcular a raiz quadrada.
+
+    Hipotenusa**2 = (Cateto A**2 + Cateto B**2)
+    */
+
+    // Entrada de dados
+    // Recebe o valor decimal do primeiro cateto
+    const catetoA = parseFloat(prompt("Digite o valor do cateto A (em cm):"));
+    // Recebe o valor decimal do segundpo cateto
+    const catetoB = parseFloat(prompt("Digite o valor do cateto B (em cm):"));
+
+
+    // Processamento
+    // Calcula com base na fórmula e indicações disponíveis
+    const hipotenusa = Math.sqrt((catetoA**2) + (catetoB**2));
+
+
+    // Saída de dados
+    // Exibe os resultados calculados
+    document.write(`O triângulo retângulo cujos dois catetos são ${catetoA.toFixed(2)}º e ${catetoB.toFixed(2)}º possuirá a hipotenusa ${hipotenusa.toFixed(2)}º`);
+
+    
+</script>

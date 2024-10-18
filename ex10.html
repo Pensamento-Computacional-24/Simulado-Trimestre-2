@@ -1,0 +1,82 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Médias das Notas: escreva um programa que peça ao usuário dois grupos de três notas e determine a média trimestral (maior nota dos dois grupos). Especifique que a primeira nota de cada grupo será a nota principal e a maior nota entre a segunda e a terceira será a recuperação. Por fim, imprima a nota principal de cada grupo, bem como a nota de recuperação e a média trimestral.
+    */
+
+    // Entrada de dados
+    // Recebimento das notas do Grupo 1
+    const G1Nota1 = parseFloat(prompt("Digite a primeira nota principal (Grupo 1):"));
+    const G1Nota2 = parseFloat(prompt("Digite a primeira nota de recuperação (Grupo 1):"));
+    const G1Nota3 = parseFloat(prompt("Digite a segunda nota de recuperação (Grupo 1):"));
+
+    // Recebimento das notas do Grupo 2
+    const G2Nota1 = parseFloat(prompt("Digite a primeira nota principal (Grupo 2):"));
+    const G2Nota2 = parseFloat(prompt("Digite a primeira nota de recuperação (Grupo 2):"));
+    const G2Nota3 = parseFloat(prompt("Digite a segunda nota de recuperação (Grupo 2):"));
+
+
+    // Processamento
+    // Criação das variáveis que serão utilizadas
+    let maiorNotaG1, maiorNotaG2, media;
+
+    // Verifica a maior nota do Grupo 1
+    // Se G1Nota1 for a maior nota do Grupo 1
+    if (G1Nota1 >= G1Nota2 && G1Nota1 >= G1Nota3){
+        // G1Nota1 é guardada como maior nota
+        maiorNotaG1 = G1Nota1;
+
+    // Se não, se G1Nota2 for a maior nota do Grupo 1
+    }else if (G1Nota2 >= G1Nota1 && G1Nota2 >= G1Nota3){
+        // G1Nota2 é guardada como maior nota
+        maiorNotaG1 = G1Nota2;
+
+    // Se não for nem a G1Nota1 ou a G1Nota2, logo
+    }else{
+        // G1Nota3 é guardada como maior nota
+        maiorNotaG1 = G1Nota3;
+    }
+
+
+    // Verifica a maior nota do Grupo 2
+    // Se G2Nota1 for a maior nota do Grupo 2
+    if (G2Nota1 >= G2Nota2 && G2Nota1 >= G2Nota3){
+        // G2Nota1 é guardada como maior nota
+        maiorNotaG2 = G2Nota1;
+
+    // Se não, se G2Nota2 for a maior nota do Grupo 2
+    }else if (G2Nota2 >= G2Nota1 && G2Nota2 >= G2Nota3){
+        // G2Nota2 é guardada como maior nota
+        maiorNotaG2 = G2Nota2;
+
+    // Se não for nem a G2Nota1 ou a G2Nota2, logo
+    }else{
+        // G2Nota3 é guardada como maior nota
+        maiorNotaG2 = G2Nota3;
+    }
+
+    // Calcula a média entre as duas maiores notas dos Grupos 1 e 2
+    media = (maiorNotaG1 + maiorNotaG2) / 2;
+
+    // Saída de dados
+    // Exibe a saída de todos os dados
+    document.write(`
+        As notas do Grupo 1 foram:<br>
+        - Nota principal: ${G1Nota1.toFixed(2)}<br>
+        - Primeira nota de recuperação: ${G1Nota2.toFixed(2)}<br>
+        - Segunda nota de recuperação: ${G1Nota3.toFixed(2)}<br>
+        <br><br>
+        As notas do Grupo 2 foram:<br>
+        - Nota principal: ${G2Nota1.toFixed(2)}<br>
+        - Primeira nota de recuperação: ${G2Nota2.toFixed(2)}<br>
+        - Segunda nota de recuperação: ${G2Nota3.toFixed(2)}<br>
+        <br><br>
+        As maiores notas do Grupo 1 e 2 foram, respectivamente: ${maiorNotaG1.toFixed(2)}, ${maiorNotaG2.toFixed(2)}.<br>
+        Potanto, a média trimestral será de ${media.toFixed(2)} pontos.
+
+
+    
+    `);
+
+    
+</script>

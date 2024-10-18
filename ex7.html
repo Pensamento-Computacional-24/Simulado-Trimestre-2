@@ -1,0 +1,62 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Calculadora: escreva um programa que peça ao usuário dois números e a operação desejada (+, -, * ou /). Realize a operação e exiba o resultado em tela.
+    */
+
+    // Entrada de dados
+    // Recebe o primeiro número do usuário
+    const numero1 = parseFloat(prompt("Digite um número:"));
+    // Recebe o segundo número do usuário
+    const numero2 = parseFloat(prompt("Digite outro número:"));
+    // Recebe a operação matemática do usuário
+    const op = prompt("Digite uma das quatro operações: +, -, *, /");
+
+    // Processamento
+    // Inicia uma variável que receberá o resultado
+    let resultado;
+
+    // Se op igual +
+    if (op == "+"){
+        resultado = numero1 + numero2;
+
+    // Se não, Se op igual -
+    }else if (op == "-"){
+        resultado = numero1 - numero2;
+
+    // Se não, Se op igual *
+    }else if (op == "*"){
+        resultado = numero1 * numero2;
+
+    // Se não, Se op igual /
+    }else if (op == "/"){
+
+        // Verifica se o numero2 é diferente de 0
+        if (numero2 != 0){
+            resultado = numero1 / numero2;
+
+        // Se for igual a zero
+        }else {
+            resultado = "Não é possível dividir por zero.";
+        }
+
+    // Caso a operação seja diferente da solicitada
+    }else {
+        resultado = "Operação inválida.";
+    }
+
+    
+    // Saída de dados
+    // Se a mensagem for diferente das duas exceções
+    if (resultado != "Operação inválida." && resultado != "Não é possível dividir por zero."){
+
+        // Exibe o resultado do cálculo
+        document.write(`O resultado da ${op} entre ${numero1.toFixed(2)} e ${numero2.toFixed(2)} é ${resultado.toFixed(2)}.`);
+        
+    // Se não, exibe a mensagem coletada
+    }else {
+        document.write(resultado);
+    }
+
+    
+</script>

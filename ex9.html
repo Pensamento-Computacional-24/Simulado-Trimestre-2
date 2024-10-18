@@ -1,0 +1,58 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Verificação de Descontos em uma Loja: escreva um programa que peça ao usuário o valor da compra e se possui um cupom de desconto (sim/não). O programa deve calcular o valor final da compra com base nas seguintes regras:
+
+    - Se o valor da compra for menor que 100, não há desconto.
+    - Se o valor da compra estiver entre 100 e 200, o desconto será de 10%.
+    - Se o valor da compra for maior que 200, o desconto será de 20%.
+    - Se o usuário tiver um cupom de desconto, ele recebe um adicional de 5% de desconto, independentemente do valor da compra.
+
+    Por fim, o programa deve exibir em tela: o valor original da compra, o valor do desconto e o valor final da compra.
+    */
+
+    // Entrada de dados
+    // Recebe o valor original da compra do usuário
+    const valorCompra = parseFloat(prompt("Digite o valor da compra:"));
+    // Recebe a confirmação se o usuário possui algum cupom
+    const cupom = prompt("Possui cupom de desconto? (S/N)").toUpperCase();
+
+
+    // Processamento
+    // Cria a variável de desconto
+    let desconto = 0;
+
+    // Se o usuário tiver algum cupom
+    if (cupom == "S"){
+        // Soma-se 5% a variável desconto
+        desconto += 0.05;
+    }
+
+    // Se o valor original da compra estiver entre 100 e 200
+    if (valorCompra >= 100 && valorCompra <= 200){
+        // Soma-se 10% a variável desconto
+        desconto += 0.10;
+
+    // Se o valor original da compra estiver acima de 200
+    }else if (valorCompra > 200){
+        // Soma-se 20% a variável desconto
+        desconto += 0.20;
+    }
+
+    // Calcula o desconto total sobre o valor da compra
+    const valorFinal = valorCompra * (1 - desconto);
+
+    // Saída de dados
+    // Se houver desconto
+    if (desconto > 0){
+        // Imprime o trecho com a saída de dados com desconto
+        document.write(`O valor da compra passou de R$ ${valorCompra.toFixed(2)} para R$ ${valorFinal.toFixed(2)} ao obter ${(desconto*100).toFixed(0)}% de desconto.`);
+
+    // Se não houver desconto
+    }else {
+        // Imprime a saída de dados sem desconto
+        document.write(`Você não obteve quaisquer descontos, sua compra continua com o mesmo valor de R$ ${valorFinal.toFixed(2)}.`);
+    }
+
+    
+</script>

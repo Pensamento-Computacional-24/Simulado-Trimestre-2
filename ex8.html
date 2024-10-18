@@ -1,0 +1,41 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Verificação de Maior Número: escreva um programa que solicite ao usuário três números e determine qual é o maior. Por fim, imprima o maior em tela.
+    */
+
+    // Entrada de dados
+    // Recebe o primeiro número inteiro
+    const num1 = parseInt(prompt("Ditite o primeiro número:"));
+    // Recebe o segundo número inteiro
+    const num2 = parseInt(prompt("Ditite o segundo número:"));
+    // Recebe o terceiro número inteiro
+    const num3 = parseInt(prompt("Ditite o terceiro número:"));
+
+
+    // Processamento
+    // Cria uma variável para receber o maior dentre os três
+    let maior;
+
+    // Se num1 >= num2 e num1 >= num3
+    if (num1 >= num2 && num1 >= num3){
+        // Num1 será o maior
+        maior = num1;
+
+    // Se não, Se num2 >= num1 e num2 >= num3
+    }else if (num2 >= num1 && num2 >= num3){
+        // Num2 será o maior
+        maior = num2;
+
+    }else{
+        // Num3 será o maior
+        maior = num3;
+    }
+
+
+    // Saída de dados
+    // Exibe o resultado das comparações
+    document.write(`O maior número entre: ${num1}, ${num2} e ${num3}; é o ${maior}.`);
+
+    
+</script>
